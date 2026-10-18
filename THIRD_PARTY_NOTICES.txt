@@ -1,0 +1,49 @@
+This local-use portable build includes the following third-party components.
+Full package notices, package metadata, model provenance and license texts are in licenses/.
+The photo 0.2 launcher uses dynamically loaded libraries in _internal/. Application sources
+matching the executable build are in application-source/. No third-party rights are changed.
+
+Python: Python Software Foundation License. https://www.python.org/
+PySide6 / Qt: LGPLv3/GPLv3/commercial options; this build uses official PySide6 wheels and dynamic Qt libraries. https://www.qt.io/qt-for-python
+NumPy: BSD-3-Clause. https://numpy.org/
+Pillow: HPND. https://python-pillow.org/
+OpenCV-contrib Python: OpenCV Apache-2.0; package and third-party component notices apply. https://opencv.org/
+libvips / pyvips: the pyvips-binary 8.18.7 wheel declares LGPL-3.0-or-later;
+  its packaging code is MIT, and pyvips is MIT. Bundled image-library terms are listed
+  in licenses/libvips-bundled/THIRD-PARTY-NOTICES.md. https://www.libvips.org/
+ONNX Runtime: MIT. https://onnxruntime.ai/
+RF-DETR face weights: RF-DETR Medium face fine-tune/export, Apache-2.0 as declared
+  by both pinned model cards. The exact cards, revisions and hashes are in licenses/RF-DETR-face/.
+  https://huggingface.co/Herojayjay/RFDETR-Face-Detection
+  https://huggingface.co/imbcmdth/rfdetr-onnx
+  model SHA256 b594500a99c3a4287805b7afa15eb74ee559be937eb00315768612846f93cc45
+YuNet face confirmation: OpenCV Zoo's face_detection_yunet_2023mar.onnx, MIT.
+  Copyright (c) 2020 Shiqi Yu. Model SHA256
+  8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4
+  License and model provenance: licenses/YuNet/.
+  https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet
+Legacy video 0.1 FFmpeg/FFprobe (not included in this photo-only 0.2 binary package):
+  Gyan Windows full build 2025-07-23, git 829680f96a, GPLv3-or-later.
+  Exact binary -L/-version/-buildconf output and original distribution LICENSE/README
+  are in licenses/FFmpeg/. These executables are invoked as separate processes.
+  https://ffmpeg.org/  https://www.gyan.dev/ffmpeg/builds/
+NVIDIA CUDA/cuDNN runtime DLLs: NVIDIA runtime component licenses apply;
+  the exact seven installed package versions, metadata and License.txt files are in
+  licenses/NVIDIA/. A compatible NVIDIA display driver is supplied by the machine,
+  and is not installed or bundled by these tools. https://developer.nvidia.com/cuda-toolkit
+
+Additional Python components (including CFFI, protobuf, flatbuffers, packaging,
+SciPy, psutil and PyInstaller's bootloader) retain their respective notices in licenses/.
+The inventory may include build/test dependency notices that are not needed at runtime.
+
+No SAM gated weights, private images, personal tokens or credentials are included in this application distribution.
+This notice is a component/provenance inventory, not a grant of additional rights by the original authors.
+
+Photo 0.2 additions:
+YOLOv8n person-context ONNX: exported from official Ultralytics yolov8n.pt.
+  AGPL-3.0, license in licenses/YOLO-person/LICENSE. No Ultralytics Python runtime or PyTorch is bundled.
+  ONNX SHA256 757a583140b8736cbb2a59f8d2c9e6ae015c45a2bbe77baaa2ceec13f284f88b
+  Exact source weights, export options and hash are in the model provenance file.
+  https://github.com/ultralytics/ultralytics
+libjpeg-turbo: native coefficient tool links libjpeg-turbo; bundled notices and build details
+  are in licenses/libjpeg-turbo/ and application-source/native/.

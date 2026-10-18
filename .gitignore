@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+build/
+dist/
+runtime/
+models/*.onnx
+.work/
+*.log
+*.zip
+validation/
+tools/PanoramaPrivacy.spec
+docs/reviews/*.diff
+
